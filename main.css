@@ -4,22 +4,27 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
 header {
   background-color: #7B2CBF;
   color: #F0F4FF;
   border-bottom: 1px solid #1A1A2E;
+  width: 100vw;
 }
 
 header h1 {
   text-align: center;
   font-size: 80px;
   padding: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
   background-color: #F0F4FF;
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 nav ul {
@@ -39,6 +44,7 @@ nav ul li a {
   text-decoration: none;
   color: #1A1A2E;
   font-size: 30px;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   border-radius: 21px;
   padding: 6px 10px;
@@ -53,4 +59,39 @@ nav ul li a.active {
   background-color: #FF6B6B;
   color: #1A1A2E;
   border: 2px solid #1A1A2E;
+}
+
+main .page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Roboto", sans-serif;
+  color: #1A1A2E;
+  margin: 40px;
+}
+
+main .page-container #sidebar {
+  flex-grow: 1;
+  padding: 20px;
+  margin: 20px;
+  background-color: #F0F4FF;
+  border-radius: 20px;
+  border: 2px solid #1A1A2E;
+}
+
+main .page-container #sidebar h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+main .page-container #sidebar ul {
+  padding-left: 40px;
+}
+
+main .page-container #content {
+  flex-grow: 4;
+  padding: 20px;
+  margin: 20px;
 }
