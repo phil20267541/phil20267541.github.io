@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #46ACC2;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 80px;
+  padding: 20px;
+}
+
+nav {
+  background-color: #46ACC2;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-self: center;
+  justify-content: space-around;
+  width: 40%;
+}
+
+nav ul li {
+  padding: 14px 16px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 21px;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #3A8EA1;
+}
+
+nav ul li a.active {
+  background-color: #46ACC2;
+  color: black;
+  border: 2px solid black;
+
+}
