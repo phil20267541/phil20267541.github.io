@@ -95,3 +95,45 @@ main .page-container #content {
   padding: 20px;
   margin: 20px;
 }
+
+footer {
+  background-color: #7B2CBF;
+  color: #F0F4FF;
+  border-top: 1px solid #1A1A2E;
+  width: 100vw;
+  margin-top: 40px;
+  padding: 40px;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+footer .footer-container .footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-container .footer-section p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+footer .footer-container .footer-section a {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #F0F4FF;
+  text-decoration: none;
+}
+
+footer .footer-container .footer-section a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-container .footer-section a:active {
+  color: #FF6B6B;
+  text-decoration: underline;
+}
