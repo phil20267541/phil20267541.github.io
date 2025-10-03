@@ -77,6 +77,7 @@ main .page-container #sidebar {
   background-color: #F0F4FF;
   border-radius: 20px;
   border: 2px solid #1A1A2E;
+  height: fit-content;
 }
 
 main .page-container #sidebar h2 {
@@ -94,6 +95,55 @@ main .page-container #content {
   flex-grow: 4;
   padding: 20px;
   margin: 20px;
+}
+
+main .page-container .project-container {
+  background-color: #F0F4FF;
+  border-radius: 20px;
+  border: 2px solid #1A1A2E;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+main .page-container .project-container .project-title {
+  color: #1A1A2E;
+  font-size: 30px;
+  padding: 10px 0 0 10px;
+}
+
+main .page-container .project-container .project-description {
+  color: #1A1A2E;
+  font-size: 20px;
+  padding: 10px 0 0 10px;
+}
+
+main .page-container .project-container .project-link {
+  color: #1A1A2E;
+  font-size: 20px;
+  padding: 10px 16px;
+  margin-top: 20px;
+  background-color: #FF6B6B;
+  border: 1px solid #1A1A2E;
+  border-radius: 10px;
+}
+
+main .page-container .project-container .project-link:hover {
+  background-color: #1A1A2E;
+  color: #F0F4FF;
+  text-decoration: none;
+}
+
+main .page-container .project-container .project-image {
+  width: auto;
+  height: auto;
+  max-height: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #1A1A2E;
 }
 
 footer {

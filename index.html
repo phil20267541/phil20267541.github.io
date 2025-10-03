@@ -25,14 +25,24 @@
         <section id="sidebar">
           <h2>Projects</h2>
           <ul>
-            <li><a >Project 1</a></li>
-            <li><a >Project 2</a></li>
-            <li><a >Project 3</a></li>
+            <li v-for="project in projects" :key="project.title">
+              <a v-bind:href="project.link">{{ project.title }}</a>
+            </li>
           </ul>
         </section>
         <section id="content">
           <h2>Welcome to My Projects Page</h2>
           <p>This is a collection of my projects. Feel free to explore and learn more about what I've been working on!</p>
+          <div v-for="item in content" :key="item.title" class="project-container" v-bind:id="item.title.toLowerCase()">
+            <div class="project-info">
+              <h3 class="project-title">{{ item.title }}</h3>
+              <p class="project-description">{{ item.description }}</p>
+              <a :href="item.link" target="_blank" class="project-link">Visit</a>
+            </div>
+            <div class="project-image-container">
+              <img :src="item.image" :alt="item.title" class="project-image">
+            </div>
+          </div>
         </section>
       </div>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
