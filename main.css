@@ -78,6 +78,18 @@ main .page-container #sidebar {
   border-radius: 20px;
   border: 2px solid #1A1A2E;
   height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+main .page-container #sidebar ul li a{
+  color: #1A1A2E;
+  text-decoration: none;
+}
+
+main .page-container #sidebar ul li a:hover{
+  color: #1A1A2E;
+  text-decoration: underline;
 }
 
 main .page-container #sidebar h2 {
