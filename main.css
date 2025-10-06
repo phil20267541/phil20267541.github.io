@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
 header {
   background-color: #7B2CBF;
@@ -109,6 +109,11 @@ main .page-container .project-container {
   width: 100%;
 }
 
+main .page-container .project-container .project-info{
+  display: flex;
+  flex-direction: column;
+}
+
 main .page-container .project-container .project-title {
   color: #1A1A2E;
   font-size: 30px;
@@ -129,6 +134,7 @@ main .page-container .project-container .project-link {
   background-color: #FF6B6B;
   border: 1px solid #1A1A2E;
   border-radius: 10px;
+  width: 75px;
 }
 
 main .page-container .project-container .project-link:hover {
@@ -141,7 +147,6 @@ main .page-container .project-container .project-image {
   width: auto;
   height: auto;
   max-height: 200px;
-  margin-top: 20px;
   border-radius: 10px;
   border: 1px solid #1A1A2E;
 }
