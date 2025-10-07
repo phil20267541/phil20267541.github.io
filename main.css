@@ -109,6 +109,46 @@ main .page-container #content {
   margin: 20px;
 }
 
+main .page-container #content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main .page-container #content h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+main .page-container #content p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+main .page-container #content p.imp-text {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main .page-container #content a {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #1A1A2E;
+  text-decoration: none;
+}
+
+main .page-container #content a:hover {
+  text-decoration: underline;
+}
+
+main .page-container #content .contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+}
+
 main .page-container .project-container {
   background-color: #F0F4FF;
   border-radius: 20px;
