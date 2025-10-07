@@ -84,6 +84,7 @@ main .page-container #sidebar {
 
 main .page-container #sidebar ul li a{
   color: #1A1A2E;
+  font-size: 25px;
   text-decoration: none;
 }
 
