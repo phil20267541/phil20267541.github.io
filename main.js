@@ -1,7 +1,9 @@
   const app = Vue.createApp({
     data() {
+        const cv_description = "As my first fully fledged website, I have used the creation of my CV website as a learing experience to test my knowledge of HTML and CSS. From this I have been able to learn responsive styling and key principles of website development. Visit my CV now to see what I can do for you.";
+
         content = [
-            { title: 'CV', description: 'My CV', link: 'https://phil20267541.github.io/CV_Website/', image: 'Resources/cv.png' },
+            { title: 'CV', description: cv_description, link: 'https://phil20267541.github.io/CV_Website/', image: 'Resources/cv.png' },
             { title: 'Shoop', description: 'All hail the shoop', link: 'https://phil20267541.github.io/Shoop/', image: 'Resources/shoop.png' }
         ]
         projects = [{title:'CV', link: '#cv'}, {title:'Shoop', link: '#shoop'}]
