@@ -1,16 +1,26 @@
-  const app = Vue.createApp({
-    data() {
-        const cv_description = "As my first fully fledged website, I have used the creation of my CV website as a learing experience to test my knowledge of HTML and CSS. From this I have been able to learn responsive styling and key principles of website development. Visit my CV now to see what I can do for you.";
-
-        content = [
-            { title: 'CV', description: cv_description, link: 'https://phil20267541.github.io/CV_Website/', image: 'Resources/cv.png' },
-            { title: 'Shoop', description: 'All hail the shoop', link: 'https://phil20267541.github.io/Shoop/', image: 'Resources/shoop.png' }
-        ]
-        projects = [{title:'CV', link: '#cv'}, {title:'Shoop', link: '#shoop'}]
-      return {
-        content, projects
+const app = Vue.createApp({
+  data() {
+    return {
+      content: [],
+      projects: []
+    };
+  },
+  methods: {
+    async fetchData() {
+      try {
+        const res = await fetch('https://your-flask-app.onrender.com/api/data');
+        const data = await res.json();
+        this.content = data.content;
+        this.projects = data.projects;
+      } catch (err) {
+        console.error('Error fetching data:', err);
       }
     }
-  })
+  },
+  mounted() {
+    // Runs when the Vue app is first loaded
+    this.fetchData();
+  }
+});
 
- app.mount('#app')
+app.mount('#app');
