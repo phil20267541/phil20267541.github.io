@@ -1,0 +1,22 @@
+main .page-container #content .contact-container a {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #1A1A2E;
+  text-decoration: none;
+}
+
+main .page-container #content .contact-container a:hover {
+  text-decoration: underline;
+}
+
+main .page-container #content .contact-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main .page-container #content .contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+}
