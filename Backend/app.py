@@ -47,7 +47,6 @@ def get_data():
 @app.route('/api/contact/submit', methods=['POST'])
 def submit_contact():
     data = request.get_json()
-    print("Received request:", data)
 
     if not data:
         return jsonify({"error": "No JSON received"}), 400
@@ -63,9 +62,6 @@ def submit_contact():
         errors['email'] = "Email is required."
     if not message:
         errors['message'] = "Message is required."
-    
-    with open('submissions.txt', 'a') as f: 
-        f.write(f"Name: {name}\nEmail: {email}\nMessage: {message}\n---\n")
     
     if errors:
         return jsonify({"errors": errors}), 400
