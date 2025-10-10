@@ -8,7 +8,7 @@ const app = Vue.createApp({
   methods: {
     async fetchData() {
       try {
-        const res = await fetch('https://your-flask-app.onrender.com/api/data');
+        const res = await fetch('https://phil20267541-hompage-backend.onrender.com/api/data');
         const data = await res.json();
         this.content = data.content;
         this.projects = data.projects;
