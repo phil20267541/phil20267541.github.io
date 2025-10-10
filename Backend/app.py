@@ -54,6 +54,9 @@ def submit_contact():
     email = data.get('email')
     message = data.get('message')
     
+    with open('submissions.txt', 'a') as f: 
+        f.write(f"Name: {name}\nEmail: {email}\nMessage: {message}\n---\n")
+    
     errors = {}
     if not name:
         errors['name'] = "Name is required."
