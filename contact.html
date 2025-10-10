@@ -45,22 +45,21 @@
           </div>
           <br><hr><br>
           <h2>Send Me a Message</h2>
-          <p>Form will go here eventually</p>
           <div class="form-container">
             <form v-on:submit.prevent="submitForm">
               <p>Name</p>
-              <input type="text" name="name" required v-model="name">
+              <input type="text" name="name" v-model="name">
               <span class="error" v-if="errors.name">{{ errors.name }}</span>
               <p>Email</p>
-              <input type="email" name="email" required v-model="email">
+              <input  name="email" v-model="email">
               <span class="error" v-if="errors.email">{{ errors.email }}</span>
               <p>Message</p>
-              <textarea name="message" required v-model="message"></textarea>
+              <textarea name="message" v-model="message"></textarea>
               <span class="error" v-if="errors.message">{{ errors.message }}</span>
               <button type="submit">Send</button>
             </form>
           </div>
-          <div v-if="submitted">
+          <div v-if="submitted" class="success-message">
             <h3>Form Submitted Successfully!</h3>
             <p><strong>Name:</strong> {{ success_name }}</p>
             <p><strong>Email:</strong> {{ success_email }}</p>

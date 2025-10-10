@@ -38,6 +38,7 @@ main .page-container #content .form-container input {
   font-size: 20px;
   padding: 6px 10px;
   margin-bottom: 20px;
+  width: 50%;
 }
 
 main .page-container #content .form-container textarea {
@@ -62,4 +63,23 @@ main .page-container #content .form-container button {
 main .page-container #content .form-container button:hover {
   background-color: #1A1A2E;
   color: #F0F4FF;
+}
+
+main .page-container #content .form-container .error {
+  display: block;
+  color: red;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+main .page-container #content .success-message {
+  justify-self: center;
+  width: 60vw;
+  padding: 20px;
+  border: 2px solid #1A1A2E;
+  border-radius: 20px;
+  background-color: #D4EDDA;
+  color: #155724;
+  font-size: 20px;
+  margin-top: 20px;
 }
