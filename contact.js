@@ -61,7 +61,6 @@ const app = Vue.createApp({
 
           if (res.ok) {
             this.submitted = true;
-            this.successMessage = result.message;
             this.success_name = this.name
             this.success_email = this.email
             this.success_message = this.message
