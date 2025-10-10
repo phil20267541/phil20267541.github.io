@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -8,7 +8,7 @@ CORS(app)
 def home():
     return jsonify({"message": "Backend is running!"})
 
-@app.route('/api/data')
+@app.route('/api/index/data')
 def get_data():
     cv_description = (
         "As my first fully fledged website, I have used the creation of my CV website "
@@ -42,6 +42,30 @@ def get_data():
         "content": content,
         "projects": projects
     })
+    
+@app.route('/api/contact/submit', methods=['POST'])
+def submit_contact():
+    data = request.get_json()
+
+    if not data:
+        return jsonify({"error": "No JSON received"}), 400
+
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
+    
+    errors = {}
+    if not name:
+        errors['name'] = "Name is required."
+    if not email:
+        errors['email'] = "Email is required."
+    if not message:
+        errors['message'] = "Message is required."
+
+    if errors:
+        return jsonify({"errors": errors}), 400
+    else:
+        return jsonify({"success": True, "message": "Form submitted successfully!"}), 200
 
 if __name__ == '__main__':
     app.run()

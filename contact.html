@@ -43,14 +43,33 @@
               </ul>
             </div>
           </div>
-          <br>
+          <br><hr><br>
+          <h2>Send Me a Message</h2>
+          <p>Form will go here eventually</p>
           <div class="form-container">
-            <h2>Send Me a Message</h2>
-            <p>Form will go here eventually</p>
+            <form v-on:submit.prevent="submitForm">
+              <p>Name</p>
+              <input type="text" name="name" required v-model="name">
+              <span class="error" v-if="errors.name">{{ errors.name }}</span>
+              <p>Email</p>
+              <input type="email" name="email" required v-model="email">
+              <span class="error" v-if="errors.email">{{ errors.email }}</span>
+              <p>Message</p>
+              <textarea name="message" required v-model="message"></textarea>
+              <span class="error" v-if="errors.message">{{ errors.message }}</span>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div v-if="submitted">
+            <h3>Form Submitted Successfully!</h3>
+            <p><strong>Name:</strong> {{ success.name }}</p>
+            <p><strong>Email:</strong> {{ success.email }}</p>
+            <p><strong>Message:</strong> {{ success.message }}</p>
           </div>
         </section>
       </div>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+      <script src="contact.js" defer></script>
     </main>
     <footer>
       <div class="footer-container">
