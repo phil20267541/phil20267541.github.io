@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       content: [],
-      projects: []
+      projects: [],
+      success: false
     };
   },
   methods: {
@@ -12,6 +13,7 @@ const app = Vue.createApp({
         const data = await res.json();
         this.content = data.content;
         this.projects = data.projects;
+        this.success = data.success;
       } catch (err) {
         console.error('Error fetching data:', err);
       }

@@ -45,6 +45,9 @@
               <img :src="item.image" :alt="item.title" class="project-image">
             </div>
           </div>
+          <div v-if="!success" class="error-message">
+            <p>Projects can take up to a minute to load. Please be patient.</p>
+          </div>
         </section>
       </div>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>

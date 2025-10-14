@@ -41,7 +41,8 @@ def get_data():
     # Return both in a single JSON object
     return jsonify({
         "content": content,
-        "projects": projects
+        "projects": projects,
+        "success": True
     })
     
 @app.route('/api/contact/submit', methods=['POST'])

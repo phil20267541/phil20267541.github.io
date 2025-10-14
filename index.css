@@ -85,3 +85,14 @@ main .page-container .project-container .project-image {
   border-radius: 10px;
   border: 1px solid #1A1A2E;
 }
+
+main .page-container .error-message {
+  background-color: #FF6B6B;
+  color: #F0F4FF;
+  border-radius: 20px;
+  border: 2px solid #1A1A2E;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
