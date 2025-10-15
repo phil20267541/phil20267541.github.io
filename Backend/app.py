@@ -1,9 +1,25 @@
 from unicodedata import name
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import os
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 CORS(app)
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db = SQLAlchemy(app)
+
+class Submission(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+    message = db.Column(db.Text, nullable=False)
+
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def home():
@@ -67,6 +83,9 @@ def submit_contact():
     if errors:
         return jsonify({"errors": errors}), 400
     else:
+        new_entry = Submission(name=name, email=email, message=message)
+        db.session.add(new_entry)
+        db.session.commit()
         return jsonify({"success": True, "message": "Form submitted successfully!"}), 200
 
 if __name__ == '__main__':
