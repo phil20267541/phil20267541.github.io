@@ -7,7 +7,9 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 CORS(app)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SUPABASE_URL")
+database_url = os.environ.get("SUPABASE_URL")
+
+app.config["SQLALCHEMY_DATABASE_URI"] = database_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
@@ -33,7 +35,6 @@ def db_test():
         return jsonify({"success": True, "message": "Connected successfully!"})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
-
 
 @app.route('/api/index/data')
 def get_data():
