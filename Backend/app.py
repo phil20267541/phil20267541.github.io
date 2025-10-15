@@ -6,12 +6,8 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-print("ALL ENV VARIABLES:")
-for k, v in os.environ.items():
-    print(k, "=", v)
-
 # Read database URL from environment
-database_url = os.environ.get("SUPABASE_URL")
+database_url = "postgresql://postgres:PBzyCJ4%24T9Te6puw@db.bnabjkbfcecnfqapajqp.supabase.co:5432/postgres?sslmode=require"
 if not database_url:
     # Fail fast if missing
     raise RuntimeError("SUPABASE_URL environment variable not set!")
