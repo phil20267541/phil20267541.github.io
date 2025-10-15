@@ -6,6 +6,10 @@ import os
 app = Flask(__name__)
 CORS(app)
 
+print("ALL ENV VARIABLES:")
+for k, v in os.environ.items():
+    print(k, "=", v)
+
 # Read database URL from environment
 database_url = os.environ.get("SUPABASE_URL")
 if not database_url:
