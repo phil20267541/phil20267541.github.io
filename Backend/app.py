@@ -25,16 +25,6 @@ with app.app_context():
 def home():
     return jsonify({"message": "Backend is running!"})
 
-@app.route("/dbtest")
-def db_test():
-    try:
-        with db.engine.connect() as conn:
-            conn.execute("SELECT 1")
-        return jsonify({"success": True, "message": "Connected successfully!"})
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)})
-
-
 @app.route('/api/index/data')
 def get_data():
     cv_description = (
