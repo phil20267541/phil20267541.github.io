@@ -1,0 +1,7 @@
+Hello! I'm Phillip Swann, a passionate developer and tech enthusiast. I'm currently studying the T-Level in Digital Production, Design and Development, where I’m learning how to turn creative ideas into real, working projects.
+
+This website, along with all of my subprojects, serves as a space to experiment, learn, and grow as a developer. I enjoy exploring new technologies, improving my design skills, and understanding how different tools fit together to create great digital experiences.
+
+I’m always looking for new ways to challenge myself — whether that’s learning new web development techniques, experimenting with frameworks, or building small side projects for fun. In the near future, I plan to dive into game development with Unity and app development with Kotlin and Flutter to expand my skills even further.
+
+Feel free to explore my projects and get in touch if you’d like to collaborate, share ideas, or just talk tech!
