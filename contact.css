@@ -5,6 +5,10 @@ main .page-container #content .contact-container a {
   text-decoration: none;
 }
 
+main .page-container #content .contact-container p {
+  font-size: 25px;
+}
+
 main .page-container #content .contact-container a:hover {
   text-decoration: underline;
 }
@@ -82,4 +86,91 @@ main .page-container #content .success-message {
   color: #155724;
   font-size: 20px;
   margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  main .page-container #content .contact-container a {
+    font-size: 20px;
+  }
+
+  main .page-container #content .contact-container h3 {
+    margin-top: 20px;
+  }
+
+  main .page-container #content .contact-container p {
+    margin: 0px;
+  }
+
+  main .page-container #content .contact-container {
+    flex-direction: column;
+  }
+
+  main .page-container #content .form-container {
+    width: 80vw;
+  }
+
+  main .page-container #content .form-container input {
+    width: 80%;
+  }
+
+  main .page-container #content .form-container .error {
+    font-size: 15px;
+  }
+
+  main .page-container #content .success-message {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  main .page-container #content .contact-container a {
+    font-size: 20px;
+  }
+
+  main .page-container #content .contact-container h3 {
+    margin-top: 20px;
+  }
+
+  main .page-container #content .contact-container p {
+    margin: 0px;
+  }
+
+  main .page-container #content .contact-container {
+    flex-direction: column;
+  }
+
+  main .page-container #content .form-container {
+    width: 80vw;
+  }
+
+  main .page-container #content .form-container input {
+    width: 80%;
+  }
+
+  main .page-container #content .form-container .error {
+    font-size: 15px;
+  }
+
+  main .page-container #content .success-message {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  main .page-container #content .contact-container {
+    flex-direction: row;
+  }
+
+  main .page-container #content .form-container {
+    width: 80vw;
+  }
+
+  main .page-container #content .form-container input {
+    width: 50%;
+  }
+
+  main .page-container #content .success-message {
+    width: 80vw;
+  }
 }
