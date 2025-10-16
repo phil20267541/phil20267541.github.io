@@ -1,9 +1,14 @@
 from unicodedata import name
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import os
+import requests
 
 app = Flask(__name__)
 CORS(app)
+
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
 
 @app.route('/')
 def home():
@@ -64,10 +69,33 @@ def submit_contact():
     if not message:
         errors['message'] = "Message is required."
     
-    if errors:
-        return jsonify({"errors": errors}), 400
+    # Prepare REST API request to Supabase
+    headers = {
+        "apikey": SUPABASE_SERVICE_ROLE_KEY,
+        "Authorization": f"Bearer {SUPABASE_SERVICE_ROLE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "return=representation"
+    }
+
+    payload = {
+        "name": name,
+        "email": email,
+        "message": message
+    }
+
+    response = requests.post(f"{SUPABASE_URL}/rest/v1/submissions", json=payload, headers=headers)
+
+    if response.status_code in (200, 201):
+        return jsonify({"success": True, "message": "Form submitted successfully!"})
     else:
-        return jsonify({"success": True, "message": "Form submitted successfully!"}), 200
+        return jsonify({
+            "success": False,
+            "error": response.text
+        }), response.status_code
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8080)
 
 if __name__ == '__main__':
     app.run()
