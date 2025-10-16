@@ -60,10 +60,18 @@
             </form>
           </div>
           <div v-if="submitted" class="success-message">
-            <h3>Form Submitted Successfully!</h3>
+            <h3>Form Submitted</h3>
             <p><strong>Name:</strong> {{ success_name }}</p>
             <p><strong>Email:</strong> {{ success_email }}</p>
             <p><strong>Message:</strong> {{ success_message }}</p>
+          </div>
+          <div v-if="success" class="success-message">
+            <h3>Form Submitted Successfully!</h3>
+            <p><strong>Name:</strong> {{ success_name }}</p>
+            <p><strong>Email:</strong> {{ success_email }}</p>
+            <p><strong>Message:</strong> {{ success_message }}</p><br>
+            <h3>Thank You for Your Message!</h3>
+            <p>I appreciate you reaching out and will get back to you as soon as possible.</p>
           </div>
         </section>
       </div>

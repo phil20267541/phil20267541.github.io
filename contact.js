@@ -9,6 +9,7 @@ const app = Vue.createApp({
       success_name: '',
       success_email: '',
       success_message: '',
+      success: false
     };
   },
   methods: {
@@ -64,6 +65,7 @@ const app = Vue.createApp({
             this.success_name = this.name
             this.success_email = this.email
             this.success_message = this.message
+            this.success = true
             this.name = '';
             this.email = '';
             this.message = '';
