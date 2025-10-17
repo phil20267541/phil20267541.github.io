@@ -1,5 +1,5 @@
 main .page-container #content .contact-container a {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 20px;
   color: #1A1A2E;
   text-decoration: none;
@@ -9,7 +9,7 @@ main .page-container #content .contact-container p {
   font-size: 25px;
 }
 
-main .page-container #content .contact-container a:hover {
+main .page-container #content .contact-container a:active {
   text-decoration: underline;
 }
 
@@ -20,7 +20,7 @@ main .page-container #content .contact-container ul {
 
 main .page-container #content .contact-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -31,7 +31,7 @@ main .page-container #content hr {
 }
 main .page-container #content .form-container {
   justify-self: center;
-  width: 60vw;
+  width: 80vw;
   padding: 20px;
   border: 2px solid #1A1A2E;
   border-radius: 20px;
@@ -42,7 +42,7 @@ main .page-container #content .form-container input {
   font-size: 20px;
   padding: 6px 10px;
   margin-bottom: 20px;
-  width: 50%;
+  width: 80%;
 }
 
 main .page-container #content .form-container textarea {
@@ -64,7 +64,6 @@ main .page-container #content .form-container button {
   cursor: pointer;
 }
 
-main .page-container #content .form-container button:hover,
 main .page-container #content .form-container button:active {
   background-color: #1A1A2E;
   color: #F0F4FF;
@@ -73,13 +72,13 @@ main .page-container #content .form-container button:active {
 main .page-container #content .form-container .error {
   display: block;
   color: red;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 10px;
 }
 
 main .page-container #content .success-message {
   justify-self: center;
-  width: 60vw;
+  width: 80vw;
   padding: 20px;
   border: 2px solid #1A1A2E;
   border-radius: 20px;
@@ -90,36 +89,12 @@ main .page-container #content .success-message {
 }
 
 @media (max-width: 480px) {
-  main .page-container #content .contact-container a {
-    font-size: 20px;
-  }
-
   main .page-container #content .contact-container h3 {
     margin-top: 20px;
   }
 
   main .page-container #content .contact-container p {
     margin: 0px;
-  }
-
-  main .page-container #content .contact-container {
-    flex-direction: column;
-  }
-
-  main .page-container #content .form-container {
-    width: 80vw;
-  }
-
-  main .page-container #content .form-container input {
-    width: 80%;
-  }
-
-  main .page-container #content .form-container .error {
-    font-size: 15px;
-  }
-
-  main .page-container #content .success-message {
-    width: 80vw;
   }
 }
 
@@ -158,6 +133,18 @@ main .page-container #content .success-message {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  main .page-container #content .contact-container a {
+    font-size: 25px;
+  }
+
+  main .page-container #content .contact-container p {
+    font-size: 25px;
+  }
+
+  main .page-container #content .contact-container a:hover,
+  main .page-container #content .contact-container a:active {
+    text-decoration: underline;
+  }
 
   main .page-container #content .contact-container {
     flex-direction: row;
@@ -171,7 +158,58 @@ main .page-container #content .success-message {
     width: 50%;
   }
 
+  main .page-container #content .form-container button:hover,
+  main .page-container #content .form-container button:active {
+    background-color: #1A1A2E;
+    color: #F0F4FF;
+  }
+
+  main .page-container #content .form-container .error {
+    font-size: 18px;
+  }
+
   main .page-container #content .success-message {
     width: 80vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  main .page-container #content .contact-container a {
+    font-size: 25px;
+  }
+
+  main .page-container #content .contact-container p {
+    font-size: 25px;
+  }
+
+  main .page-container #content .contact-container a:hover,
+  main .page-container #content .contact-container a:active {
+    text-decoration: underline;
+  }
+
+  main .page-container #content .contact-container {
+    flex-direction: row;
+  }
+
+  main .page-container #content .form-container {
+    width: 60vw;
+  }
+
+  main .page-container #content .form-container input {
+    width: 50%;
+  }
+
+  main .page-container #content .form-container button:hover,
+  main .page-container #content .form-container button:active {
+    background-color: #1A1A2E;
+    color: #F0F4FF;
+  }
+
+  main .page-container #content .form-container .error {
+    font-size: 18px;
+  }
+
+  main .page-container #content .success-message {
+    width: 60vw;
   }
 }
