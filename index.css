@@ -198,6 +198,10 @@ main .page-container .error-message {
     scroll-margin-top: 80px;
   }
 
+  main .page-container .project-container .project-info{
+    flex-direction: column;
+  }
+
   main .page-container .project-container .project-title {
     font-size: 25px;
   }
@@ -217,5 +221,57 @@ main .page-container .error-message {
 
   main .page-container .error-message {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1025) {
+  main .page-container #sidebar h2 {
+    font-size: 40px;
+  }
+
+  main .page-container #sidebar ul li a{
+    font-size: 25px;
+  }
+
+  main .page-container #sidebar ul li a:hover,
+  main .page-container #sidebar ul li a:active{
+    color: #1A1A2E;
+    text-decoration: underline;
+  }
+
+  main .page-container .project-container {
+    flex-direction: row;
+    scroll-margin-top: 80px;
+  }
+
+  main .page-container .project-container .project-info{
+    flex-direction: column;
+  }
+
+  main .page-container .project-container .project-title {
+    font-size: 30px;
+  }
+
+  main .page-container .project-container .project-description {
+    font-size: 20px;
+  }
+
+  main .page-container .project-container .project-link {
+    font-size: 20px;
+  }
+
+  main .page-container .project-container .project-link:hover,
+  main .page-container .project-container .project-link:active {
+    background-color: #1A1A2E;
+    color: #F0F4FF;
+    text-decoration: none;
+  }
+
+  main .page-container .project-container .project-image-container {
+    align-self: right;
+  }
+
+  main .page-container .error-message {
+    font-size: 25px;
   }
 }
