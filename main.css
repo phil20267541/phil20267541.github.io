@@ -191,6 +191,10 @@ footer .footer-container .footer-section a:active {
     font-size: 20px;
   }
 
+  footer .footer-container {
+    flex-direction: column;
+  }
+
   footer .footer-container .footer-section h3 {
     font-size: 5vw;
   }
@@ -245,6 +249,10 @@ footer .footer-container .footer-section a:active {
 
   main .page-container #content p.imp-text {
     font-size: 20px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
   }
 
   footer .footer-container .footer-section h3 {
