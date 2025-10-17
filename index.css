@@ -27,7 +27,8 @@ main .page-container #sidebar ul li a{
   text-decoration: none;
 }
 
-main .page-container #sidebar ul li a:hover{
+main .page-container #sidebar ul li a:hover,
+main .page-container #sidebar ul li a:active{
   color: #1A1A2E;
   text-decoration: underline;
 }
@@ -72,7 +73,8 @@ main .page-container .project-container .project-link {
   width: 75px;
 }
 
-main .page-container .project-container .project-link:hover {
+main .page-container .project-container .project-link:hover,
+main .page-container .project-container .project-link:active {
   background-color: #1A1A2E;
   color: #F0F4FF;
   text-decoration: none;

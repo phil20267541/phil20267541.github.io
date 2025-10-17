@@ -64,7 +64,8 @@ main .page-container #content .form-container button {
   cursor: pointer;
 }
 
-main .page-container #content .form-container button:hover {
+main .page-container #content .form-container button:hover,
+main .page-container #content .form-container button:active {
   background-color: #1A1A2E;
   color: #F0F4FF;
 }
