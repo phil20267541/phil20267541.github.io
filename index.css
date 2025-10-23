@@ -201,7 +201,7 @@ main .page-container .error-message {
   }
 }
 
-@media (min-width: 1025) {
+@media (min-width: 1025px) {
   main .page-container #sidebar h2 {
     font-size: 40px;
     width: auto;
