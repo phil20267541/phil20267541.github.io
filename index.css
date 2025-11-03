@@ -72,6 +72,7 @@ main .page-container .project-container .project-link {
   border: 1px solid #1A1A2E;
   border-radius: 10px;
   width: 75px;
+  margin-bottom: 20px;
 }
 
 main .page-container .project-container .project-link:active {
