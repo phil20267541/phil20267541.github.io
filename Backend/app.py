@@ -95,10 +95,14 @@ def submit_contact():
             "to": os.environ.get("TARGET_EMAIL"),
             "subject": f"New message from {name}",
             "html": f"""
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> {name}</p>
-                <p><strong>Email:</strong> {email}</p>
-                <p><strong>Message:</strong><br>{message}</p>
+                <div style="background-color: #7B2CBF;padding: 10px;margin: 0;">
+                    <h2 style="font-size: 40px;justify-self: center;color: #F0F4FF;padding: 0;margin: 0;">New Contact Form Submission</h2>
+                </div>
+                <div style="background-color: #F0F4FF;padding: 20px;margin: 0;">
+                    <p style="font-size: 25px;color: #1A1A2E;padding: 0;margin: 0;"><strong>Name:</strong> {name}</p>
+                    <p style="font-size: 25px;color: #1A1A2E;padding: 0;margin: 0;"><strong>Email:</strong> {email}</p>
+                    <p style="font-size: 25px;color: #1A1A2E;padding: 0;margin: 0;"><strong>Message:</strong><br>{message}</p>
+                </div>
             """
         })
     except Exception as e:
