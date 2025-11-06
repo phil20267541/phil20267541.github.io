@@ -101,18 +101,6 @@ def submit_contact():
                 <p><strong>Message:</strong><br>{message}</p>
             """
         })
-        
-         # Confirmation to the sender
-        resend.Emails.send({
-            "from": "Phil2026741's Projects <onboarding@resend.dev>",
-            "to": email,
-            "subject": "Thank you for your message!",
-            "html": f"""
-                <h3>Hi {name},</h3>
-                <p>Thanks for reaching out! I’ll get back to you soon.</p>
-                <p>Best regards,<br>Phillip</p>
-            """
-        })
     except Exception as e:
         print("Email error:", e)
     
