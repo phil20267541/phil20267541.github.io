@@ -47,6 +47,8 @@ const app = Vue.createApp({
 
     async sendData() {
       try {
+        this.submitted = false
+        this.success = false
         const res = await fetch('https://phil20267541-hompage-backend.onrender.com/api/contact/submit', {
           method: 'POST',
           headers: {
