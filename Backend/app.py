@@ -91,7 +91,7 @@ def submit_contact():
     try:
         # Send to yourself
         resend.Emails.send({
-            "from": "Your Website <onboarding@resend.dev>",
+            "from": "Phil2026741's Projects <onboarding@resend.dev>",
             "to": os.environ.get("TARGET_EMAIL"),
             "subject": f"New message from {name}",
             "html": f"""
@@ -104,7 +104,7 @@ def submit_contact():
         
          # Confirmation to the sender
         resend.Emails.send({
-            "from": "Your Website <onboarding@resend.dev>",
+            "from": "Phil2026741's Projects <onboarding@resend.dev>",
             "to": email,
             "subject": "Thank you for your message!",
             "html": f"""
