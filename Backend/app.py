@@ -3,12 +3,35 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
 import requests
+import resend
+
 
 app = Flask(__name__)
 CORS(app)
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+
+
+def send_email_via_resend(to, subject, html):
+    api_key = os.environ.get("RESEND_API_KEY")
+    url = "https://api.resend.com/emails"
+
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+
+    data = {
+        "from": "Your Website <onboarding@resend.dev>",
+        "to": [to],
+        "subject": subject,
+        "html": html
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+    print("Email response:", response.status_code, response.text)
+    return response.status_code == 200
 
 @app.route('/')
 def home():
@@ -85,6 +108,21 @@ def submit_contact():
 
     response = requests.post(f"{SUPABASE_URL}/rest/v1/submissions", json=payload, headers=headers)
 
+    try:
+        # Send to yourself
+        send_email_via_resend(
+            to=os.environ.get("TARGET_EMAIL"),
+            subject=f"New contact form submission from {name}",
+            html=f"""
+                <h2>New message received!</h2>
+                <p><strong>Name:</strong> {name}</p>
+                <p><strong>Email:</strong> {email}</p>
+                <p><strong>Message:</strong><br>{message}</p>
+            """
+        )
+    except Exception as e:
+        print("Email error:", e)
+    
     if response.status_code in (200, 201):
         return jsonify({"success": True, "message": "Form submitted successfully!"})
     else:
